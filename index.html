@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>颜色选择器</title>
+    <style type="text/css">
+        *{margin:0;padding: 0}
+        li{list-style: none}
+        body{height: 100%}
+    </style>
+<link rel="stylesheet" href="colorPicker.css">
+</head>
+<body>
+<input id="color1" type="button" value="c1"/>
+<input id="color2" type="button" value="c2"/>
+<input id="color3" type="button" value="c3"/>
+<script type="text/javascript" src="http://johnqing.github.io/Ntpl.js/nTpl.js"></script>
+<script type="text/javascript" src=colorPicker.js"></script>
+<script>
+    colorPicker(document.getElementById('color1'),{
+        callback: function(color){
+            this.target.style.background = color;
+        }
+    });
+    colorPicker(document.getElementById('color2'));
+    colorPicker(document.getElementById('color3'));
+</script>
+</body>
+</html>
