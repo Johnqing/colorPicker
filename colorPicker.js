@@ -59,7 +59,7 @@
             on(self.cp.getElementsByTagName('ul')[0], 'click', function(ev){
                 ev = ev || window.event;
                 var oTarget = ev.target || ev.srcElement;
-                oTarget.parentNode.tagName.toUpperCase() === "A" && (oTarget = oTarget.parentNode);
+                oTarget.parentNode.tagName.toUpperCase() === "LI" && (oTarget = oTarget.parentNode);
                 if(oTarget.tagName.toUpperCase() === "LI") {
                     var color = oTarget.getAttribute('data-color');
                     self.callback.call(self, color);
